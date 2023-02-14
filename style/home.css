@@ -1,0 +1,146 @@
+nav {
+    font-family: "myriad-pro", sans-serif;
+    opacity: 75%;
+
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    padding: 50px;
+    margin-left: 100px;
+}
+  
+  .name {
+    order: 1;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    transition: font-size 0.5s ease-in-out;
+  }
+  .name:hover {
+    /* font-size: 24px; */
+    font-weight: bold;
+  }
+  
+  .links {
+    order: 3;
+  }
+  
+  .links a {
+    margin-left: 10px;
+    margin-right: 100px;
+    color: black;
+    text-decoration: none;
+    transition: font-size 0.5s ease-in-out;
+    width: 100px;
+
+    display: inline-block;
+    text-align: center;
+  }
+  .links a:hover {
+    /* font-size: 24px; */
+    font-weight: bold;
+  }
+  
+  .description {
+    font-family: "myriad-pro", sans-serif;
+    text-align: center;
+  }
+  .description h1{
+    padding-top: 5%;
+  }
+  .position {
+    color: navy
+  }
+  
+.intro{
+    line-height: 1.5;
+    padding-bottom: 5%;
+}
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rect1 {
+    width: 400px;
+    height: 400px;
+    background-color: #b1a7a69f;
+    border-radius: 15px;
+    overflow: hidden; 
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.25s ease-in-out;
+}
+
+.rect2 {
+    width: 400px;
+    height: 400px;
+    background-color: #a4161bd2;
+    border-radius: 15px;
+    overflow: hidden; 
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease-in-out;
+}
+
+.rect3 {
+    width: 400px;
+    height: 400px;
+    background-color: #660709c1;
+    border-radius: 15px;
+    overflow: hidden; 
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.25s ease-in-out;
+}
+
+.rect4 {
+    width: 400px;
+    height: 400px;
+    background-color: #161a1d9e;
+    border-radius: 15px;
+    overflow: hidden; 
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.25s ease-in-out;
+}
+.rectangle:hover {
+    transform: scale(1.1);
+
+}
+  
+svg {
+    width: 50%;
+    height: 50%;
+    opacity: 85%;
+}
+footer{
+    padding: 2.5%;
+}
+.footerLink {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+
+}
+.footerLink:hover{
+    text-decoration: underline;
+}
