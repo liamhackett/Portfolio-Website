@@ -63,7 +63,13 @@ nav {
     justify-content: center;
     align-items: center;
   }
-
+.project-description{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   .rect1 {
     width: 400px;
     height: 400px;
@@ -132,8 +138,16 @@ svg {
     height: 50%;
     opacity: 85%;
 }
+
+hr{
+    margin-top: 2.5%;
+    width: 80%;
+    opacity: 75%;
+}
+
 footer{
-    padding: 2.5%;
+   padding: 1%;
+   opacity: 75%;
 }
 .footerLink {
     color: black;
