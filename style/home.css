@@ -1,160 +1,229 @@
 nav {
-    font-family: "myriad-pro", sans-serif;
-    opacity: 75%;
+  font-family: "myriad-pro", sans-serif;
+  opacity: 75%;
 
-    display: flex;
-    justify-content: space-between;
-    
-    align-items: center;
-    padding: 50px;
-    margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  
+  align-items: center;
+  padding: 50px;
+  margin-left: 100px;
+}
+p{
+  font-size: large;
+}
+
+.name {
+  order: 1;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: font-size 0.5s ease-in-out;
+}
+.name:hover {
+  /* font-size: 24px; */
+  font-weight: bold;
+}
+
+.links {
+  order: 3;
 }
   
-  .name {
-    order: 1;
-    color: black;
-    text-decoration: none;
-    font-size: 16px;
-    transition: font-size 0.5s ease-in-out;
-  }
-  .name:hover {
-    /* font-size: 24px; */
-    font-weight: bold;
-  }
-  
-  .links {
-    order: 3;
-  }
-  
-  .links a {
-    margin-left: 10px;
-    margin-right: 100px;
-    color: black;
-    text-decoration: none;
-    transition: font-size 0.5s ease-in-out;
-    width: 100px;
+.links a {
+  margin-left: 10px;
+  margin-right: 100px;
+  color: black;
+  text-decoration: none;
+  transition: font-size 0.5s ease-in-out;
+  width: 100px;
 
-    display: inline-block;
-    text-align: center;
-  }
-  .links a:hover {
-    /* font-size: 24px; */
-    font-weight: bold;
-  }
+  display: inline-block;
+  text-align: center;
+}
+.links a:hover {
+  /* font-size: 24px; */
+  font-weight: bold;
+}
   
-  .description {
-    font-family: "myriad-pro", sans-serif;
-    text-align: center;
-  }
-  .description h1{
-    padding-top: 5%;
-  }
-  .position {
-    color: navy
-  }
-  
+.description {
+  font-family: "myriad-pro", sans-serif;
+  text-align: center;
+}
+.description h1{
+  padding-top: 5%;
+}
+.position {
+  color: navy;
+  font-size: large;
+}
+
 .intro{
-    line-height: 1.5;
-    padding-bottom: 5%;
+  line-height: 1.5;
+  padding-bottom: 5%;
+  font-size: large;
 }
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-.project-description{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-  .rect1 {
-    width: 400px;
-    height: 400px;
-    background-color: #b1a7a69f;
-    border-radius: 15px;
-    overflow: hidden; 
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    transition: transform 0.25s ease-in-out;
+
+.rect1 {
+  width: 500px;
+  height: 500px;
+  background-color: #b1a7a69f;
+  border-radius: 15px;
+  overflow: hidden; 
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.25s ease-in-out;
+}
+
+.textbox {
+  width: 500px;
+  height: 500px;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: white;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+
+}
+.textbox p {
+  margin: 5%;
+}
+.rect1:hover .textbox{
+  opacity: 75%;
+}
+.rect1:hover {
+  transform: scale(1.1);
+}
+
+.rect1:hover svg {
+filter: blur(5px);
+}
+
+.spotify-logo {
+  width: 35%;
+  height: 35%;
+  opacity: 85%;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  z-index: 1;
+}
+.raspberry-pi-logo {
+width: 35%;
+height: 35%;
+opacity: 85%;
+position: absolute;
+top: 50%;
+left: 50%;
+z-index: 2;
+transform: rotate(15deg);
 }
 
 .rect2 {
-    width: 400px;
-    height: 400px;
-    background-color: #a4161bd2;
-    border-radius: 15px;
-    overflow: hidden; 
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.25s ease-in-out;
+  width: 500px;
+  height: 500px;
+  background-color: #a4161bd2;
+  border-radius: 15px;
+  overflow: hidden; 
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease-in-out;
 }
 
+.rect2:hover .textbox{
+  opacity: 75%;
+}
+.rect2:hover {
+  transform: scale(1.1);
+}
+
+.rect2:hover svg {
+filter: blur(5px);
+}
+
+
 .rect3 {
-    width: 400px;
-    height: 400px;
-    background-color: #660709c1;
-    border-radius: 15px;
-    overflow: hidden; 
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    transition: transform 0.25s ease-in-out;
+  width: 500px;
+  height: 500px;
+  background-color: #660709c1;
+  border-radius: 15px;
+  overflow: hidden; 
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  transition: transform 0.25s ease-in-out;
+}
+
+.rect3:hover .textbox{
+  opacity: 75%;
+}
+.rect3:hover {
+  transform: scale(1.1);
+}
+
+.rect3:hover svg {
+filter: blur(5px);
 }
 
 .rect4 {
-    width: 400px;
-    height: 400px;
-    background-color: #161a1d9e;
-    border-radius: 15px;
-    overflow: hidden; 
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-    transition: transform 0.25s ease-in-out;
-}
-.rectangle:hover {
-    transform: scale(1.1);
-
-}
+  width: 500px;
+  height: 500px;
+  background-color: #161a1d9e;
+  border-radius: 15px;
+  overflow: hidden; 
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
-svg {
-    width: 50%;
-    height: 50%;
-    opacity: 85%;
+  transition: transform 0.25s ease-in-out;
+}
+
+.rect4:hover .textbox{
+  opacity: 75%;
+}
+.rect4:hover {
+  transform: scale(1.1);
+}
+
+.rect4:hover svg {
+filter: blur(5px);
 }
 
 hr{
-    margin-top: 2.5%;
-    width: 80%;
-    opacity: 75%;
+  margin-top: 2.5%;
+  width: 80%;
+  opacity: 75%;
 }
 
 footer{
-   padding: 1%;
-   opacity: 75%;
+  padding: 1%;
+  opacity: 75%;
 }
 .footerLink {
-    color: black;
-    text-decoration: none;
-    padding: 10px;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
 
 }
 .footerLink:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
