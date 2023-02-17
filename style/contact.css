@@ -44,10 +44,12 @@ nav {
 
 
 .description {
-font-family: "myriad-pro", sans-serif;
-text-align: center;
+    font-family: "myriad-pro", sans-serif;
+    text-align: center;
 }
 
+
+  
 hr{
     margin-top: 2.5%;
     width: 80%;

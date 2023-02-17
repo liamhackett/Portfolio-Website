@@ -44,9 +44,16 @@ nav {
 
 
 .description {
-font-family: "myriad-pro", sans-serif;
-text-align: center;
+    font-family: "myriad-pro", sans-serif;
+    text-align: center;
 }
+
+.bio {
+    font-family: "myriad-pro", sans-serif;
+    text-align: center;
+    opacity: 85%;
+}
+
 
 hr{
     margin-top: 2.5%;
@@ -67,3 +74,34 @@ footer{
 .footerLink:hover{
     text-decoration: underline;
 }
+
+img{
+    width:20%;
+    border-radius: 15px;
+}
+
+img:hover {
+    filter: blur(5px);
+}
+
+/* .image-container {
+    display: inline-block; 
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+  
+.text{
+    position: absolute;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; 
+    font-size: 24px; 
+    opacity: 0;
+}
+.image-container:hover .text{
+    opacity: 1;
+} */
