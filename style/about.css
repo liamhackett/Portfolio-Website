@@ -1,51 +1,83 @@
-nav {
+/* light mode variables */
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --position-text-color: navy;
+    --card-color: #333;
+  }
+  
+  /* dark mode variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #333;
+      --text-color: #fff;
+      --position-text-color: #4385f5;
+      --card-color: #f0f0f0;
+    }
+
+
+  }
+
+  /* dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+  }
+
+
+  /* styles */
+
+  /* Navigation bar */
+
+  nav {
     font-family: "myriad-pro", sans-serif;
     opacity: 75%;
-
     display: flex;
     justify-content: space-between;
-    
+  
     align-items: center;
     padding: 50px;
     margin-left: 100px;
-}
-  
-.name {
+  }
+  .name {
     order: 1;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     font-size: 16px;
     transition: font-size 0.5s ease-in-out;
-}
-.name:hover {
-    /* font-size: 24px; */
+  }
+  .name:hover {
     font-weight: bold;
-}
-  
-.links {
+  }
+
+  .links {
     order: 3;
-}
-  
-.links a {
+  }
+    
+  .links a {
     margin-left: 10px;
     margin-right: 100px;
-    color: black;
+    color: var(--text-color)black;
     text-decoration: none;
     transition: font-size 0.5s ease-in-out;
     width: 100px;
-
+  
     display: inline-block;
     text-align: center;
-}
-.links a:hover {
-    /* font-size: 24px; */
-    font-weight: bold;
-}
+  }
 
+  .links a:hover {
+    font-weight: bold;
+  }
 
 .description {
     font-family: "myriad-pro", sans-serif;
     text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .bio {
@@ -55,25 +87,32 @@ nav {
 }
 
 
-hr{
+  /* Footer */
+
+  hr{
     margin-top: 2.5%;
     width: 80%;
     opacity: 75%;
-}
-
-footer{
-    padding: 2.5%;
+  }
+  footer{
+    padding: 1%;
     opacity: 75%;
-}
-.footerLink {
-    color: black;
+  }
+  .tag{
+    font-size: large;
+    line-height: 1.5;
+  }
+  .footerLink {
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px;
-
-}
-.footerLink:hover{
+  }
+  .footerLink:hover{
     text-decoration: underline;
-}
+  }
+
+  
+  
 
 img{
     width:20%;
@@ -83,25 +122,3 @@ img{
 img:hover {
     filter: blur(5px);
 }
-
-/* .image-container {
-    display: inline-block; 
-    position: relative;
-    align-items: center;
-    justify-content: center;
-}
-  
-.text{
-    position: absolute;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: black; 
-    font-size: 24px; 
-    opacity: 0;
-}
-.image-container:hover .text{
-    opacity: 1;
-} */

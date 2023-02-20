@@ -1,27 +1,61 @@
+/* light mode variables */
+:root {
+  --bg-color: #fff;
+  --text-color: #333;
+  --position-text-color: navy;
+  --card-color: #333;
+  --invert: 1;
+  --gradient-1: #1E416F;
+  --gradient-2: #B4D9E7;
+}
+
+/* dark mode variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #333;
+    --text-color: #fff;
+    --position-text-color: #4385f5;
+    --card-color: #f0f0f0;
+    --invert: 0;
+    --gradient-1: #ea5358;
+    --gradient-2: #f7ba2b;
+  }
+
+
+}
+
+/* dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+}
+
+
+/* styles */
+
+/* Navigation bar */
+
 nav {
   font-family: "myriad-pro", sans-serif;
   opacity: 75%;
-
   display: flex;
   justify-content: space-between;
-  
+
   align-items: center;
   padding: 50px;
   margin-left: 100px;
 }
-p{
-  font-size: large;
-}
-
 .name {
   order: 1;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   font-size: 16px;
   transition: font-size 0.5s ease-in-out;
 }
 .name:hover {
-  /* font-size: 24px; */
   font-weight: bold;
 }
 
@@ -32,7 +66,7 @@ p{
 .links a {
   margin-left: 10px;
   margin-right: 100px;
-  color: black;
+  color: var(--text-color)black;
   text-decoration: none;
   transition: font-size 0.5s ease-in-out;
   width: 100px;
@@ -40,74 +74,105 @@ p{
   display: inline-block;
   text-align: center;
 }
+
 .links a:hover {
-  /* font-size: 24px; */
   font-weight: bold;
 }
-  
+
+/* Name and Introduction */
+
 .description {
   font-family: "myriad-pro", sans-serif;
   text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 .description h1{
   padding-top: 5%;
 }
 .position {
-  color: navy;
+  color: var(--position-text-color);
   font-size: large;
 }
-
 .intro{
   line-height: 1.5;
   padding-bottom: 5%;
   font-size: large;
 }
 
+/* Projects */
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.rect1 {
+/* Project 1*/
+.project-card-1{
   width: 500px;
   height: 500px;
-  background-color: #b1a7a69f;
-  border-radius: 15px;
-  overflow: hidden; 
+  background-color: var(--card-color);
+  border-radius: 20px;
+  overflow: hidden;
   margin: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   transition: transform 0.25s ease-in-out;
+  
+  border: 10px solid transparent;
+  background-clip: padding-box;
+  background-image: linear-gradient(to bottom right, var(--gradient-1), var(--gradient-2));
 }
 
+/* Project 2 */
+.project-card-2{
+  width: 500px;
+  height: 500px;
+  background-color: var(--card-color);
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.25s ease-in-out;
+  
+  border: 10px solid transparent;
+  background-clip: padding-box;
+  background-image: linear-gradient(to bottom right, var(--gradient-2), var(--gradient-1));
+}
 .textbox {
   width: 500px;
   height: 500px;
-  border-radius: 15px;
-  background-color: black;
+  border-radius: 20x;
+  background-color: var(--text-color);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  color: white;
+  color: var(--bg-color);
   z-index: 3;
   justify-content: center;
   align-items: center;
-
 }
+
 .textbox p {
   margin: 5%;
+  font-size: large;
 }
-.rect1:hover .textbox{
+
+.project-card-1:hover .textbox, .project-card-2:hover .textbox{
   opacity: 75%;
 }
-.rect1:hover {
+
+.project-card-1:hover, .project-card-2:hover{
   transform: scale(1.1);
 }
 
-.rect1:hover svg {
+.project-card-1:hover svg {
   filter: blur(5px);
+  filter: invert(var(--invert));
 }
 
 .spotify-logo {
@@ -118,112 +183,45 @@ p{
   top: 15%;
   left: 15%;
   z-index: 1;
+  filter: invert(var(--invert));
 }
+
 .raspberry-pi-logo {
-width: 35%;
-height: 35%;
-opacity: 85%;
-position: absolute;
-top: 50%;
-left: 50%;
-z-index: 2;
-transform: rotate(15deg);
+  width: 35%;
+  height: 35%;
+  opacity: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: rotate(15deg);
+  filter: invert(var(--invert));
 }
 
-.rect2 {
-  width: 500px;
-  height: 500px;
-  background-color: #a4161bd2;
-  border-radius: 15px;
-  overflow: hidden; 
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.25s ease-in-out;
-}
-
-.rect2:hover .textbox{
-  opacity: 75%;
-}
-.rect2:hover {
-  transform: scale(1.1);
-}
-
-.rect2:hover svg {
-filter: blur(5px);
-}
-
-
-.rect3 {
-  width: 500px;
-  height: 500px;
-  background-color: #660709c1;
-  border-radius: 15px;
-  overflow: hidden; 
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  transition: transform 0.25s ease-in-out;
-}
-
-.rect3:hover .textbox{
-  opacity: 75%;
-}
-.rect3:hover {
-  transform: scale(1.1);
-}
-
-.rect3:hover svg {
-filter: blur(5px);
-}
-
-.rect4 {
-  width: 500px;
-  height: 500px;
-  background-color: #161a1d9e;
-  border-radius: 15px;
-  overflow: hidden; 
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  
-  transition: transform 0.25s ease-in-out;
-}
-
-.rect4:hover .textbox{
-  opacity: 75%;
-}
-.rect4:hover {
-  transform: scale(1.1);
-}
-
-.rect4:hover svg {
-filter: blur(5px);
-}
+/* Footer */
 
 hr{
   margin-top: 2.5%;
   width: 80%;
   opacity: 75%;
 }
-
 footer{
   padding: 1%;
   opacity: 75%;
 }
+.tag{
+  font-size: large;
+  line-height: 1.5;
+}
 .footerLink {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   padding: 10px;
-
 }
 .footerLink:hover{
   text-decoration: underline;
 }
+
+
+
+
