@@ -5,8 +5,10 @@
   --position-text-color: navy;
   --card-color: #333;
   --invert: 1;
-  --gradient-1: #1E416F;
-  --gradient-2: #B4D9E7; 
+  /* --gradient-1: #1E416F;
+  --gradient-2: #B4D9E7;  */
+  --gradient-1: #3e719c;
+  --gradient-2: #6aa13b;
 }
 
 /* dark mode variables */
@@ -17,8 +19,10 @@
     --position-text-color: #4385f5;
     --card-color: #f0f0f0;
     --invert: 0;
-    --gradient-1: #ea5358;
-    --gradient-2: #f7ba2b;
+    /* --gradient-1: #ea5358;
+    --gradient-2: #f7ba2b; */
+    --gradient-1: #3e719c;
+    --gradient-2: #6aa13b;
   }
 
 }
@@ -50,9 +54,6 @@
     --text-box-font-size-h1: larger;
     --font-size: large;
   }
-  /* .links a:nth-child(2){
-    margin-left: 40%;
-  } */
 }
 
 /* For screens smaller than or equal to 768px (mobile) */
@@ -146,8 +147,7 @@
 }
 
 .project-card:hover svg {
-  filter: blur(10px);
-  filter: invert(var(--invert));
+  filter: blur(5px) invert(var(--invert));
 }
 
 .spotify-logo {
@@ -173,7 +173,8 @@
   filter: invert(var(--invert));
 }
 
-
-
+.project-link{
+  text-decoration: none;
+}
 
 

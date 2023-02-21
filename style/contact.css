@@ -2,7 +2,7 @@
 :root {
     --bg-color: #fff;
     --text-color: #333;
-    --position-text-color: navy;
+    --email-color: #4385f5;
     --card-color: #333;
   }
   
@@ -11,7 +11,7 @@
     :root {
       --bg-color: #333;
       --text-color: #fff;
-      --position-text-color: #4385f5;
+      --email-color: navy;
       --card-color: #f0f0f0;
     }
 
@@ -28,7 +28,9 @@
   }
 
   /* styles */
-
+*{
+  font-family:  "myriad-pro", sans-serif;
+}
 .description {
     font-family: "myriad-pro", sans-serif;
     text-align: center;
@@ -37,3 +39,105 @@
 }
 
   
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--text-color);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+form h2,h3{
+  float: left;
+  color: var(--bg-color);
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+textarea {
+  height: 200px;
+}
+
+button[type="submit"] {
+  display: block;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.send-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--bg-color);
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: var(--text-color);
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.send-button:hover {
+  background: var(--bg-color);
+  color: var(--text-color);
+  box-shadow: 0 0 5px var(--bg-color),
+              0 0 25px var(--bg-color),
+              0 0 50px var(--bg-color),
+              0 0 100px var(--bg-color);
+}
+
+.send-button span {
+  position: absolute;
+  display: block;
+}
+
+.send-button:hover a span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+}
+
+p{
+  color: var(--bg-color);
+}
+.email {
+  color: var(--email-color);
+  text-decoration: none;
+}
+.email:hover{
+  text-decoration: underline;
+}
+

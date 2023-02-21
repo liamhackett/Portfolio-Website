@@ -1,0 +1,107 @@
+/* light mode variables */
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+    --position-text-color: navy;
+    --card-color: #333;
+    --invert: 1;
+    --gradient-1: #1E416F;
+    --gradient-2: #B4D9E7; 
+  }
+  
+  /* dark mode variables */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-color: #333;
+      --text-color: #fff;
+      --position-text-color: #4385f5;
+      --card-color: #f0f0f0;
+      --invert: 0;
+      --gradient-1: #ea5358;
+      --gradient-2: #f7ba2b;
+    }
+  
+  }
+  
+  /* dark mode styles */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+  
+  }
+  
+  
+  /* styles */
+  
+  
+  
+  @media screen and (min-width: 768px) {
+    :root{
+      --card-width: 500px;
+      --text-box-font-size: large;
+      --text-box-font-size-h1: larger;
+      --font-size: large;
+    }
+
+  }
+  
+  /* For screens smaller than or equal to 768px (mobile) */
+  @media screen and (max-width: 768px) {
+    :root{
+      --card-width: 250px;
+      --text-box-font-size: large;
+      --text-box-font-size-h1: large;
+      --font-size: small;
+    }
+  }
+  
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  
+  figure {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    text-align: center;
+    position: relative;
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+    font-size: xx-small;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    display: block;
+    border-radius: 1em;
+  }
+  
+  
+.description{
+  font-family: "myriad-pro", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1{
+  margin: 2% 25%;
+}
+p{
+  margin: 0 25%;
+}

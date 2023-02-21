@@ -20,17 +20,34 @@
   </nav>
   </nav>
 <body class="description">
-  
-    <hr>
-    <footer>
-        <p>Copyright © 2023 My Portfolio Website.<br>
-          <a class="footerLink" href="https://github.com/liamhackett" target="_blank">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-          <a class="footerLink" href="https://www.linkedin.com/in/william-j-hackett/" target="_blank">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-        </p>
+ 
+  <form action="email.php" method="post">
+    
+    <h2>Dear Liam Hackett,</h2>
+    <label for="message"></label>
+    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+    <h3>Best, </h3>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" placeholder="Your name" required>
+    <label for="email"></label>
+    <input type="email" id="email" name="email" placeholder="Your email" required>
+    <div class="container">
+      <button type="submit" class="send-button"><span></span>Send</button>
+    </div>
+    <p>Or you can find me at <a class="email" href="mailto:wjhackett7@gmail.com">wjhackett7@gmail.com</a>.</p>
+    
+  </form>
+  <hr>
+  <footer>
+    <p>Copyright © 2023 My Portfolio Website.<br>
+      <a class="footerLink" href="https://github.com/liamhackett" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a class="footerLink" href="https://www.linkedin.com/in/william-j-hackett/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </p>
     </footer>   
 </body>
 </html>
