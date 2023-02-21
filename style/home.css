@@ -21,7 +21,6 @@
     --gradient-2: #f7ba2b;
   }
 
-
 }
 
 /* dark mode styles */
@@ -30,6 +29,12 @@
     background-color: var(--bg-color);
     color: var(--text-color);
   }
+
+  .project-card{
+    box-shadow: 15px 15px 30px #191919,
+              -15px -15px 30px #292929;
+  }
+
 
 }
 
@@ -104,9 +109,6 @@
   justify-content: center;
   position: relative;
   transition: transform 0.25s ease-in-out;
-
-  border: 10px solid transparent;
-  background-clip: padding-box;
 }
 .project-1{
   background-image: linear-gradient(to bottom right, var(--gradient-1), var(--gradient-2));
@@ -144,7 +146,7 @@
 }
 
 .project-card:hover svg {
-  filter: blur(5px);
+  filter: blur(10px);
   filter: invert(var(--invert));
 }
 
