@@ -29,79 +29,11 @@
 
   /* styles */
 
-  /* Navigation bar */
-
-  nav {
-    font-family: "myriad-pro", sans-serif;
-    opacity: 75%;
-    display: flex;
-    justify-content: space-between;
-  
-    align-items: center;
-    padding: 50px;
-    margin-left: 100px;
-  }
-  .name {
-    order: 1;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 16px;
-    transition: font-size 0.5s ease-in-out;
-  }
-  .name:hover {
-    font-weight: bold;
-  }
-
-  .links {
-    order: 3;
-  }
-    
-  .links a {
-    margin-left: 10px;
-    margin-right: 100px;
-    color: var(--text-color)black;
-    text-decoration: none;
-    transition: font-size 0.5s ease-in-out;
-    width: 100px;
-  
-    display: inline-block;
-    text-align: center;
-  }
-
-  .links a:hover {
-    font-weight: bold;
-  }
-
-
 .description {
     font-family: "myriad-pro", sans-serif;
     text-align: center;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-
-  /* Footer */
-
-  hr{
-    margin-top: 2.5%;
-    width: 80%;
-    opacity: 75%;
-  }
-  footer{
-    padding: 1%;
-    opacity: 75%;
-  }
-  .tag{
-    font-size: large;
-    line-height: 1.5;
-  }
-  .footerLink {
-    color: var(--text-color);
-    text-decoration: none;
-    padding: 10px;
-  }
-  .footerLink:hover{
-    text-decoration: underline;
-  }
 
   

@@ -6,7 +6,7 @@
   --card-color: #333;
   --invert: 1;
   --gradient-1: #1E416F;
-  --gradient-2: #B4D9E7;
+  --gradient-2: #B4D9E7; 
 }
 
 /* dark mode variables */
@@ -36,48 +36,30 @@
 
 /* styles */
 
-/* Navigation bar */
 
-nav {
-  font-family: "myriad-pro", sans-serif;
-  opacity: 75%;
-  display: flex;
-  justify-content: space-between;
 
-  align-items: center;
-  padding: 50px;
-  margin-left: 100px;
-}
-.name {
-  order: 1;
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 16px;
-  transition: font-size 0.5s ease-in-out;
-}
-.name:hover {
-  font-weight: bold;
+@media screen and (min-width: 768px) {
+  :root{
+    --card-width: 500px;
+    --text-box-font-size: large;
+    --text-box-font-size-h1: larger;
+    --font-size: large;
+  }
+  /* .links a:nth-child(2){
+    margin-left: 40%;
+  } */
 }
 
-.links {
-  order: 3;
-}
-  
-.links a {
-  margin-left: 10px;
-  margin-right: 100px;
-  color: var(--text-color)black;
-  text-decoration: none;
-  transition: font-size 0.5s ease-in-out;
-  width: 100px;
-
-  display: inline-block;
-  text-align: center;
+/* For screens smaller than or equal to 768px (mobile) */
+@media screen and (max-width: 768px) {
+  :root{
+    --card-width: 250px;
+    --text-box-font-size: large;
+    --text-box-font-size-h1: large;
+    --font-size: small;
+  }
 }
 
-.links a:hover {
-  font-weight: bold;
-}
 
 /* Name and Introduction */
 
@@ -92,12 +74,13 @@ nav {
 }
 .position {
   color: var(--position-text-color);
-  font-size: large;
+  font-size: var(--font-size);
 }
 .intro{
+  width: var(--card-width);
   line-height: 1.5;
   padding-bottom: 5%;
-  font-size: large;
+  font-size: var(--font-size);
 }
 
 /* Projects */
@@ -105,14 +88,15 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Project 1*/
-.project-card-1{
-  width: 500px;
-  height: 500px;
+/* Project */
+.project-card{
+  width: var(--card-width);
+  height: var(--card-width);
   background-color: var(--card-color);
-  border-radius: 25px;
+  border-radius: 1.5em;
   overflow: hidden;
   margin: 20px;
   display: flex;
@@ -120,34 +104,21 @@ nav {
   justify-content: center;
   position: relative;
   transition: transform 0.25s ease-in-out;
-  
+
   border: 10px solid transparent;
   background-clip: padding-box;
+}
+.project-1{
   background-image: linear-gradient(to bottom right, var(--gradient-1), var(--gradient-2));
 }
-
-/* Project 2 */
-.project-card-2{
-  width: 500px;
-  height: 500px;
-  background-color: var(--card-color);
-  border-radius: 25px;
-  overflow: hidden;
-  margin: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: transform 0.25s ease-in-out;
-  
-  border: 10px solid transparent;
-  background-clip: padding-box;
+.project-2{
   background-image: linear-gradient(to bottom right, var(--gradient-2), var(--gradient-1));
 }
+
 .textbox {
-  width: 500px;
-  height: 500px;
-  border-radius: 25x;
+  width: var(--card-width);
+  height: var(--card-width);
+  border-radius: 1em;
   background-color: var(--text-color);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -156,21 +127,23 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
+.textbox h1 {
+  font-size: var(--text-box-font-size-h1);
+}
 .textbox p {
   margin: 5%;
-  font-size: large;
+  font-size: var(--text-box-font-size);
 }
 
-.project-card-1:hover .textbox, .project-card-2:hover .textbox{
+.project-card:hover .textbox, .project-card-2:hover .textbox{
   opacity: 75%;
 }
 
-.project-card-1:hover, .project-card-2:hover{
+.project-card:hover, .project-card-2:hover{
   transform: scale(1.1);
 }
 
-.project-card-1:hover svg {
+.project-card:hover svg {
   filter: blur(5px);
   filter: invert(var(--invert));
 }
@@ -198,29 +171,6 @@ nav {
   filter: invert(var(--invert));
 }
 
-/* Footer */
-
-hr{
-  margin-top: 2.5%;
-  width: 80%;
-  opacity: 75%;
-}
-footer{
-  padding: 1%;
-  opacity: 75%;
-}
-.tag{
-  font-size: large;
-  line-height: 1.5;
-}
-.footerLink {
-  color: var(--text-color);
-  text-decoration: none;
-  padding: 10px;
-}
-.footerLink:hover{
-  text-decoration: underline;
-}
 
 
 
