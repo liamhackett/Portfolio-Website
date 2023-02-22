@@ -34,10 +34,10 @@
     color: var(--text-color);
   }
 
-  .project-card{
+  /* .project-card{
     box-shadow: 15px 15px 30px #191919,
               -15px -15px 30px #292929;
-  }
+  } */
 
 
 }
@@ -138,12 +138,12 @@
   font-size: var(--text-box-font-size);
 }
 
-.project-card:hover .textbox, .project-card-2:hover .textbox{
-  opacity: 75%;
+.project-card:hover .textbox{
+  opacity: 70%;
 }
 
 .project-card:hover, .project-card-2:hover{
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 
 .project-card:hover svg {

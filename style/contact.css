@@ -4,6 +4,7 @@
     --text-color: #333;
     --email-color: #4385f5;
     --card-color: #333;
+    --shadow-color: #0000003a;
   }
   
   /* dark mode variables */
@@ -13,9 +14,8 @@
       --text-color: #fff;
       --email-color: navy;
       --card-color: #f0f0f0;
+      --shadow-color: rgba(255, 255, 255, .25);
     }
-
-
   }
 
   /* dark mode styles */
@@ -24,7 +24,6 @@
       background-color: var(--bg-color);
       color: var(--text-color);
     }
-
   }
 
   /* styles */
@@ -38,20 +37,22 @@
     color: var(--text-color);
 }
 
-  
 form {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
   background-color: var(--text-color);
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px var(--shadow-color);
+  /* box-shadow: 0 4px 8px black; */
+              
 }
 
 form h2,h3{
   float: left;
   color: var(--bg-color);
 }
+
 label {
   display: block;
   margin-bottom: 10px;
@@ -85,10 +86,12 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .container{
   display: flex;
   justify-content: center;
 }
+
 .send-button {
   position: relative;
   display: inline-block;
@@ -107,6 +110,7 @@ button[type="submit"] {
   background: var(--text-color);
   border-radius: 5px;
   box-shadow: none;
+  transition: .5s ease-in-out;
 }
 
 .send-button:hover {
