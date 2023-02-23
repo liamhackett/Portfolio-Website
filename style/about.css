@@ -25,6 +25,7 @@
       --text-box-font-size: large;
       --text-box-font-size-h1: larger;
       --font-size: large;
+      --card-font-size: 1em;
     }
   }
   
@@ -36,6 +37,7 @@
       --text-box-font-size: large;
       --text-box-font-size-h1: large;
       --font-size: small;
+      --card-font-size: .8em;
     }
   }
 
@@ -59,8 +61,9 @@
 .container{
   display: flex;
   justify-content: center;
-
+  padding-top: 2%;
 }
+
 .card {
   overflow: visible;
   position: relative;
@@ -124,13 +127,13 @@
 /*Text*/
 .title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: var(--card-font-size);
   color: #333; 
 }
 
 .caption {
   font-weight: 500;
-  font-size: 1em;
+  font-size: var(--card-font-size);
   color: #333;
   display: block;
   margin-top: 5px;
