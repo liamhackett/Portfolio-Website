@@ -30,7 +30,7 @@
   }
   
   /* For screens smaller than or equal to 768px (mobile) */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1170px) {
     :root{
       --card-width: 200px;
       --card-height: 250px;
@@ -140,7 +140,8 @@
 } 
 
 /*Hover*/
-.card:hover .imgbox {
+@media(hover:hover) {
+.card:hover .imgbox{
   bottom: 80px;
 }
 
@@ -148,9 +149,23 @@
   transform: rotate(20deg);
 }
 
-.card:hover:after {
+.card:hover:after{
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
 }
- 
- 
+
+}
+@media(hover:none) {
+  .card.tapped .imgbox {
+    bottom: 80px;
+  }
+
+  .card.tapped:before {
+    transform: rotate(20deg);
+  }
+
+  .card.tapped:after {
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+  }
+}

@@ -1,16 +1,28 @@
 /* Navigation bar */
 :root{
   --text-color: #333;
+  --font-size: 1em;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #fff;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1170px) {
   .links a:nth-child(2){
     margin-left: 40%;
   }
+}
+/* For screens smaller than or equal to 768px (mobile) */
+@media screen and (max-width: 1170px) {
+  :root{
+    --font-size: 16px;
+  }
+
+  .links a:nth-child(2){
+    margin-left: 0;
+  }
+
 }
 
 *{
@@ -21,6 +33,7 @@ nav {
     display: inline;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
   }
   
   .links a {
@@ -31,6 +44,7 @@ nav {
     display: inline-block;
     text-align: center;
     transition: transform 0.25s ease-in-out;
+    font-size: var(--font-size);
   }
 
   .hover-underline-animation {
@@ -65,6 +79,7 @@ hr{
   opacity: 75%;
 }
 footer{
+  text-align: center;
   padding: 1.5%;
   opacity: 75%;
 }
